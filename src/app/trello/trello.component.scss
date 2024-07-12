@@ -3,18 +3,23 @@
   display: flex;
   box-sizing: border-box;
   padding: 50px;
+  justify-content: center;
 }
 
 .timeline {
+  position: relative;
   border-radius: 13px;
-  background-color: azure;
-  box-shadow: 0 0 4px 4px #0000004f;
+  box-shadow: 0 0 12px 4px rgb(39, 39, 39);
   padding: 12px;
   margin: 0 16px;
   width: 33%;
+  max-width: 420px;
   overflow-y: auto;
+  background-color: rgb(255, 210, 216);
+}
 
-  app-card:not(:first-child) {
-    margin-top: 20px;
-  }
+.add-card-btn {
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 30px);
 }

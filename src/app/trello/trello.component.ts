@@ -1,4 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
+
+import { CardComponent } from './components/card/card.component';
 
 @Component({
   selector: 'app-trello',
@@ -7,7 +9,13 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class TrelloComponent {
 
-  @ViewChild('trelloBoard') trelloBoard!: ElementRef;
+  @ViewChild('trelloBoard', { read: ViewContainerRef }) trelloBoard!: any;
+  @ViewChild('appCardContainerRef', { read: ViewContainerRef }) appCardContainerRef!: any;
+
+
+  addCard(): void {
+    this.appCardContainerRef.createComponent(CardComponent)
+  }
 
   dragOver(event: DragEvent): void {
     event.preventDefault();
