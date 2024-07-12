@@ -1,0 +1,7 @@
+<div class="card-wrapper" draggable="true" #cardWrapper (dragstart)="dragStart($event)" (dragend)="dragEnd($event)">
+  <input type="color" [formControl]="colorPicker">
+  <h3 contenteditable="true">
+    Task Subject
+  </h3>
+  <textarea contenteditable="true">Task Description...</textarea>
+</div>

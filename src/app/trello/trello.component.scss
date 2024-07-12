@@ -1,0 +1,20 @@
+.trello-board {
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.timeline {
+  border-radius: 13px;
+  background-color: azure;
+  box-shadow: 0 0 4px 4px #0000004f;
+  padding: 12px;
+  margin: 0 16px;
+  width: 33%;
+  overflow-y: auto;
+
+  app-card:not(:first-child) {
+    margin-top: 20px;
+  }
+}

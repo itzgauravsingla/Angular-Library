@@ -7,8 +7,12 @@ const routes: Routes = [
     loadChildren: () => import('./circles/circles.module').then(m => m.CirclesModule)
   },
   {
+    path: 'trello',
+    loadChildren: () => import('./trello/trello.module').then(m => m.TrelloModule)
+  },
+  {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];

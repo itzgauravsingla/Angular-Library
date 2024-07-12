@@ -8,7 +8,9 @@ import { CircleComponent } from './components/circle/circle.component';
   styleUrls: ['./circles.component.scss']
 })
 export class CirclesComponent {
+
   @ViewChild('viewCompRef', { read: ViewContainerRef }) viewCompRef: any;
+
   left: number = 0;
   top: number = 0;
   radius: number = 15;
